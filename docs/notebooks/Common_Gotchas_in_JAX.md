@@ -121,7 +121,7 @@ print(jit(pure_uses_internal_state)(5.))
 
 +++ {"id": "cDpQ5u63Ba_H"}
 
-It is not recommended to use iterators in any JAX function you want to `jit` or in any control-flow primitive. The reason is that an iterator is a python object which introduces state to retrieve the next element. Therefore, it is incompatible with JAX functional programming model. In the code below, there are some examples of incorrect attempts to use iterators with JAX. Most of them return an error, but some give unexpected results.
+It is not recommended to use iterators in any JAX function you want to `jit` or in any control-flow primitive. The reason is that an iterator is a python object which introduces state to retrieve the next element. Therefore, it is incompatible with JAX's functional programming model. In the code below, there are some examples of incorrect attempts to use iterators with JAX. Most of them return an error, but some give unexpected results.
 
 ```{code-cell} ipython3
 :id: w99WXa6bBa_H
@@ -680,7 +680,7 @@ Many such cases are discussed in detail in the sections above; here we list seve
 
 ## 🔪 Sharp bits covered in tutorials
 - {ref}`control-flow` discusses how to work with the constraints that `jit` imposes on the use of Python control flow and logical operators.
-- {ref}`stateful-computations` gives some advice on how to properly handle state in a JAX program, given that JAX transformations can be applied only to pure functions.
+- {ref}`stateful-computations` give some advice on how to properly handle state in a JAX program, given that JAX transformations can be applied only to pure functions.
 
 ## Fin.
 
